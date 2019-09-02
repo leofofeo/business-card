@@ -19,7 +19,13 @@ class MyApp extends StatelessWidget {
                 renderAvatar(),
                 renderName(),
                 renderTitle(),
-                SizedBox(height: 10.0),
+                SizedBox(
+                  height: 20.0,
+                  width: 200.0,
+                  child: Divider(
+                    color: Colors.amber[300],
+                  )
+                ),
                 renderEmail(),
                 renderPhoneNumber(),
                 renderGithubProfile(),
