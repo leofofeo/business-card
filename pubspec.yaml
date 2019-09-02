@@ -54,10 +54,10 @@ flutter:
   fonts:
     - family: Quicksand
       fonts:
-        - asset: fonts/
+        - asset: fonts/Quicksand-Regular.ttf
     - family: SourceSansPro
       fonts:
-        - asset: fonts/
+        - asset: fonts/SourceSansPro-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

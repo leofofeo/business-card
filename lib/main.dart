@@ -29,6 +29,7 @@ class MyApp extends StatelessWidget {
                 renderEmail(),
                 renderPhoneNumber(),
                 renderGithubProfile(),
+                renderLinkedIn(),
               ],
             ),
           ),
@@ -70,20 +71,23 @@ Widget renderTitle() {
 }
 
 Widget renderEmail() {
-  return Card(
-    margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
-    color: Colors.deepPurple[300],
-    child: ListTile(
-      leading: Icon(
-        Icons.email,
-        color: Colors.amber[300]
-      ),
-      title: Text(
-        'leo.a.rubiano@gmail.com',
-        style: TextStyle(
-          color: Colors.white,
-          fontFamily: 'Quicksand',
-          fontSize: 22.0,
+  return GestureDetector(
+    onTap: () { print('tapped email!'); },
+    child: Card(
+      margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
+      color: Colors.deepPurple[300],
+      child: ListTile(
+        leading: Icon(
+          Icons.email,
+          color: Colors.amber[300]
+        ),
+        title: Text(
+          'leo.a.rubiano@gmail.com',
+          style: TextStyle(
+            color: Colors.white,
+            fontFamily: 'Quicksand',
+            fontSize: 22.0,
+          ),
         ),
       ),
     ),
@@ -91,20 +95,23 @@ Widget renderEmail() {
 }
 
 Widget renderPhoneNumber() {
-  return Card(
-    margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
-    color: Colors.deepPurple[300],
-    child: ListTile(
-      leading: Icon(
-        Icons.phone,
-        color: Colors.amber[300]
-      ),
-      title: Text(
-        '781-428-0644',
-        style: TextStyle(
-          color: Colors.white,
-          fontFamily: 'Quicksand',
-          fontSize: 22.0,
+  return GestureDetector(
+    onTap: () { print('From phone number!'); },
+    child: Card(
+      margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
+      color: Colors.deepPurple[300],
+      child: ListTile(
+        leading: Icon(
+          Icons.phone,
+          color: Colors.amber[300]
+        ),
+        title: Text(
+          '781-428-0644',
+          style: TextStyle(
+            color: Colors.white,
+            fontFamily: 'Quicksand',
+            fontSize: 22.0,
+          ),
         ),
       ),
     ),
@@ -112,20 +119,47 @@ Widget renderPhoneNumber() {
 }
 
 Widget renderGithubProfile() {
-  return Card(
-    margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
-    color: Colors.deepPurple[300],
-    child: ListTile(
-      leading: Icon(
-        Icons.code,
-        color: Colors.amber[300]
+  return GestureDetector(
+    onTap: (){ print('From github!'); },
+    child: Card(
+      margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
+      color: Colors.deepPurple[300],
+      child: ListTile(
+        leading: Icon(
+          Icons.code,
+          color: Colors.amber[300]
+        ),
+        title: Text(
+          'github.com/leofofeo',
+          style: TextStyle(
+            color: Colors.white,
+            fontFamily: 'Quicksand',
+            fontSize: 22.0,
+          ),
+        ),
       ),
-      title: Text(
-        'github.com/leofofeo',
-        style: TextStyle(
-          color: Colors.white,
-          fontFamily: 'Quicksand',
-          fontSize: 22.0,
+    ),
+  );
+}
+
+Widget renderLinkedIn() {
+  return GestureDetector(
+    onTap: (){ print('From linkedin!'); },
+    child: Card(
+      margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
+      color: Colors.deepPurple[300],
+      child: ListTile(
+        leading: Icon(
+          Icons.web,
+          color: Colors.amber[300]
+        ),
+        title: Text(
+          'in/leorubiano',
+          style: TextStyle(
+            color: Colors.white,
+            fontFamily: 'Quicksand',
+            fontSize: 22.0,
+          ),
         ),
       ),
     ),
