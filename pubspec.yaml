@@ -55,6 +55,9 @@ flutter:
     - family: Quicksand
       fonts:
         - asset: fonts/
+    - family: SourceSansPro
+      fonts:
+        - asset: fonts/
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
