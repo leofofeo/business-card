@@ -19,8 +19,10 @@ class MyApp extends StatelessWidget {
                 renderAvatar(),
                 renderName(),
                 renderTitle(),
+                SizedBox(height: 10.0),
                 renderEmail(),
                 renderPhoneNumber(),
+                renderGithubProfile(),
               ],
             ),
           ),
@@ -62,63 +64,64 @@ Widget renderTitle() {
 }
 
 Widget renderEmail() {
-  return Container(
-    width: 300.0,
-    padding: EdgeInsets.all(15.0),
-    margin: EdgeInsets.only(top: 20.0),
+  return Card(
+    margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
     color: Colors.deepPurple[300],
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: <Widget>[
-        Container(
-          margin: EdgeInsets.only(right: 15.0),
-          child: Icon(
-            Icons.email,
-            size: 25.0,
-            color: Colors.amber[300], 
-          ),
+    child: ListTile(
+      leading: Icon(
+        Icons.email,
+        color: Colors.amber[300]
+      ),
+      title: Text(
+        'leo.a.rubiano@gmail.com',
+        style: TextStyle(
+          color: Colors.white,
+          fontFamily: 'Quicksand',
+          fontSize: 22.0,
         ),
-        Text(
-          'hey@leorubiano.com',
-          style: TextStyle(
-            color: Colors.white,
-            fontFamily: 'Quicksand',
-            fontSize: 22.0,
-          ),
-        )
-      ],
+      ),
     ),
   );
 }
 
 Widget renderPhoneNumber() {
-  return Container(
-    width: 300.0,
-    padding: EdgeInsets.all(15.0),
-    margin: EdgeInsets.only(top: 20.0),
+  return Card(
+    margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
     color: Colors.deepPurple[300],
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: <Widget>[
-        Container(
-          margin: EdgeInsets.only(right: 15.0),
-          child: Icon(
-            Icons.phone,
-            size: 25.0,
-            color: Colors.amber[300], 
-          ),
+    child: ListTile(
+      leading: Icon(
+        Icons.phone,
+        color: Colors.amber[300]
+      ),
+      title: Text(
+        '781-428-0644',
+        style: TextStyle(
+          color: Colors.white,
+          fontFamily: 'Quicksand',
+          fontSize: 22.0,
         ),
-        Text(
-          '781-428-0644',
-          style: TextStyle(
-            color: Colors.white,
-            fontFamily: 'Quicksand',
-            fontSize: 22.0,
-          ),
-        )
-      ],
+      ),
+    ),
+  );
+}
+
+Widget renderGithubProfile() {
+  return Card(
+    margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
+    color: Colors.deepPurple[300],
+    child: ListTile(
+      leading: Icon(
+        Icons.code,
+        color: Colors.amber[300]
+      ),
+      title: Text(
+        'github.com/leofofeo',
+        style: TextStyle(
+          color: Colors.white,
+          fontFamily: 'Quicksand',
+          fontSize: 22.0,
+        ),
+      ),
     ),
   );
 }
